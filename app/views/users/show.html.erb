@@ -1,11 +1,7 @@
 <div class="profile-wrap">
   <div class="row">
     <div class="col-md-4 text-center">
-      <% if @user.avatar? %>
-        <%= image_tag @user.avatar.url, class: "round-img" %>
-      <% else %>
-        <%= image_tag ("no-image.png"), class: "round-img" %>
-      <% end %>
+      <%= image_tag @user.avatar.url, class: "round-img" %>
     </div>
     <div class="col-md-8">
       <div class="row">
