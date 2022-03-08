@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_04_072549) do
+ActiveRecord::Schema.define(version: 2022_03_08_041121) do
 
   create_table "photos", force: :cascade do |t|
     t.string "image", null: false
@@ -25,6 +25,13 @@ ActiveRecord::Schema.define(version: 2022_03_04_072549) do
     t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "live_venue"
+    t.string "artist"
+    t.time "start_time"
+    t.time "ending_time"
+    t.date "start_date"
+    t.date "end_date"
+    t.text "body"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
