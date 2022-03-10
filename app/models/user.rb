@@ -15,7 +15,7 @@ class User < ApplicationRecord
       params.delete(:password_confirmation)
     end
 
-    result = update(params, *options)
+    result = update_attributes(params, *options)
     clean_up_passwords
     result
   end
