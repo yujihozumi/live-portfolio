@@ -3,6 +3,8 @@ require 'carrierwave/storage/file'
 require 'carrierwave/storage/fog'
 CarrierWave::SanitizedFile.sanitize_regexp = /[^[:word:]\.\-\+]/
 CarrierWave.configure do |config|
+  config.storage :fog
+  config.fog_provider = 'fog/aws'
   config.fog_public = false
   config.fog_directory  = ENV['S3_BUCKET']
   config.asset_host = ENV['S3_HOST_NAME']
