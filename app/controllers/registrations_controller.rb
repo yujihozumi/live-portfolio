@@ -1,19 +1,14 @@
 class RegistrationsController < Devise::RegistrationsController
-  protected
-
-  def update_resource(resource, params)
-    resource.update_without_current_password(params)
+  def update
+    if @user.update(user_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
   end
 
-  def after_update_path_for(resource)
-    user_path(resource)
-  end
-
-  def configure_sign_up_params
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
-  end
-
-  def configure_account_update_params
-    devise_parameter_sanitizer.permit(:account_update, keys: [:name, :avatar])
+  private
+  def user_params
+    params.require(:user).permit(:name, :email, :avatar, :user_body)
   end
 end
