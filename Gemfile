@@ -64,4 +64,3 @@ gem 'carrierwave', '~> 2.0'
 gem "mini_magick"
 gem "ransack"
 gem 'dotenv-rails'
-gem 'aws-sdk-s3'
