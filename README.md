@@ -1,24 +1,36 @@
-# README
+# ライブの記録
+音楽を聞くことが大好きで、自分で行ったライブを記録できるような思い出を残すサイトを作りたいと思い制作しました。  
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# 簡単な説明
+このアプリは自分が行ったライブ、フェスなどの思い出を残しておけるアプリとなっています。  
 
-Things you may want to cover:
+# 工夫したポイント  
+・検索する時アーティストとタイトルで検索できるように実装した事。  
+・投稿にいいねとコメントを残せるように実装した事。  
 
-* Ruby version
+# 機能
+・deviseによるログイン機能  
+・ゲストユーザーによるログイン機能  
+・ransackによる検索機能  
+・ユーザーの投稿にいいねができる機能  
+・ユーザーの投稿にコメントができる機能  
 
-* System dependencies
+# 使い方
+1, アプリを開き新規登録をします。もしくはゲストユーザーでログインします。  
+2, 投稿画面で、タイトル、ライブの感想、アーティスト、会場、開催日、開演時間を入力し最後に写真を選択して投稿します。  
+3, 投稿したものはコメントを残したり、いいねをつけることが出来ます。  
 
-* Configuration
+# 開発環境
+Ruby/Ruby on Rails/SQLite3/Visual Studio Code/heroku/AWS
 
-* Database creation
+# 必要要件
+MacOs　　
 
-* Database initialization
+# ER図
+![D20AF7E1-A1AC-4C05-B621-F0FA94EC2E74_1_201_a](https://user-images.githubusercontent.com/85857291/158049820-129cecf5-7638-4723-8156-62386f6624af.jpeg)  
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# デモ画像
+# トップページ
+![3830BAD6-219C-41C6-9A23-E8BACC74D249_1_201_a](https://user-images.githubusercontent.com/85857291/158050001-0f937f33-8355-4176-a856-dba314e4231f.jpeg)
+# 投稿詳細ページ
+![336C4B14-AD7A-46FE-A419-44385CD5599D_1_201_a](https://user-images.githubusercontent.com/85857291/158050033-357224d4-b7a8-44cb-8129-2d2f6b9b8e56.jpeg)  
