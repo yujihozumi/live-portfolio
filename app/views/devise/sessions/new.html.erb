@@ -23,7 +23,10 @@
         アカウントをお持ちでないですか？
         <%= link_to "登録する", new_user_registration_path %>
       </p>
-
+      <p class="devise-link">
+        ゲストログイン
+        <%= link_to 'ゲストログイン（閲覧用）', users_guest_sign_in_path, method: :post, class: "login" %>
+      </p>
     </div>
   </div>
 </div>
