@@ -1,10 +1,10 @@
 class RegistrationsController < Devise::RegistrationsController
-  def update
-    @user.update(user_params)
+  protected
+  def after_update_path_for(resource)
+    user_path(resource)
   end
 
-  private
-  def user_params
-    params.require(:user).permit(:name, :email, :avatar, :user_body)
+  def update_resource(resource, params)
+    resource.update_without_current_password(params)
   end
 end
