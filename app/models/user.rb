@@ -9,6 +9,16 @@ class User < ApplicationRecord
   validates :name, presence: true, length: { maximum: 50 }
   mount_uploader :avatar, AvatarUploader
 
+  def update_without_current_password(params, *options)
+    if params[:password].blank? && params[:password_confirmation].blank?
+      params.delete(:password)
+      params.delete(:password_confirmation)
+    end
+    result = update(params, *options)
+    clean_up_passwords
+    result
+  end
+
   def self.guest
     find_or_create_by!(email: 'guest@example.com') do |user|
       user.password = SecureRandom.urlsafe_base64
