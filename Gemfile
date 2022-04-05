@@ -31,6 +31,10 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   #Use sqlite3 as the database for Active Record
   gem 'sqlite3', '~> 1.4'
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'factory_bot_rails'
+  gem 'faker'
 end
 
 group :development do
@@ -46,7 +50,7 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 3.26'
+  # gem 'capybara', '>= 3.26'
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
@@ -64,3 +68,4 @@ gem 'carrierwave', '~> 2.0'
 gem "mini_magick"
 gem "ransack"
 gem 'dotenv-rails'
+gem 'pry-rails'
