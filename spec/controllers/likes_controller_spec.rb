@@ -1,31 +1,33 @@
 require 'rails_helper'
 
 RSpec.describe "Like", type: :controller do
-  before do
+  let(:user) { create(:user) }
+  let(:post) { create(:post) }
+  let(:like) { create(:like, user_id: user.id, post_id: post.id) }
+
+  describe "いいね機能" do
     before do
-      user = FactoryBot.create(:user)
-      post = FactoryBot.create(:post)
-      @like = FactoryBot.build(:like, user_id: user.id, post_id: post.id)
-    end
-  end
-
-  describe "POST #create" do
-    before do
-      sign_in @user
+      sign_in user
     end
 
-    it "responds with JSON formatted output" do
-      post :create, format: :js,
-      params: { post_id: post.id, id: like.id }
-      expect(response.content_type).to eq "application/json"
+    context 'いいねできる場合' do
+      it "post_id, user_id,があればいいねできる" do
+        expect(like).to be_valid
+      end
     end
 
-    it "add a new like to the tweet" do
-      expect { post :create, format: :json, params: { post_id: post.id, id: like.id } }.to change{ Like.count }.by(1)
-    end
+    context 'いいねできない場合' do
+      it "ユーザーがログインしていなければいいねできない" do
+        like.user_id = nil
+        like.valid?
+        expect(like.errors.full_messages).to include "Userを入力してください"
+      end
 
-    it "保存できる" do
-      expect(@like).to be_valid
+      it "投稿したものがなければいいねできない" do
+        like.post_id = nil
+        like.valid?
+        expect(like.errors.full_messages).to include "Postを入力してください"
+      end
     end
   end
 end
