@@ -1,4 +1,4 @@
-<div class="col-md-10 col-md-offset-1 mx-auto postShow-wrap">
+<div class="col-md-12 col-md-offset-1 mx-auto postShow-wrap">
   <div class="row post-wrap">
     <div class="col-md-8">
       <div class="card-left">
@@ -47,6 +47,9 @@
             <p class="text-post">
               開演時間 : <strong><%= @post.start_time.strftime("%H:%M") %>から<%= @post.ending_time.strftime( "%H:%M" ) %>まで</strong>
             </p>
+          </div>
+          <div class="m-2">
+            <%= render 'partial/map' %>
           </div>
           <div class="comment-post-id">
             <div class="m-2">
