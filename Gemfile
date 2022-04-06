@@ -69,3 +69,4 @@ gem "mini_magick"
 gem "ransack"
 gem 'dotenv-rails'
 gem 'pry-rails'
+gem 'geocoder'
