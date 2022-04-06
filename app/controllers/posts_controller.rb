@@ -48,7 +48,7 @@ class PostsController < ApplicationController
 
   private
     def post_params
-      params.require(:post).permit(:title, :body, :start_date, :start_time, :ending_time, :artist, :live_venue, photos_attributes: [:image]).merge(user_id: current_user.id)
+      params.require(:post).permit(:title, :body, :start_date, :start_time, :ending_time, :artist, :live_venue, :latitude, :longitude,photos_attributes: [:image]).merge(user_id: current_user.id)
     end
 
     def set_post

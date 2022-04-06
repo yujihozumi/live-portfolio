@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_08_044009) do
+ActiveRecord::Schema.define(version: 2022_04_06_092611) do
 
   create_table "comments", force: :cascade do |t|
     t.text "comment", null: false
@@ -51,6 +51,9 @@ ActiveRecord::Schema.define(version: 2022_03_08_044009) do
     t.date "start_date"
     t.date "end_date"
     t.text "body"
+    t.float "latitude"
+    t.float "longitude"
+    t.string "address"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 

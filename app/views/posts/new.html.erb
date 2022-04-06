@@ -20,24 +20,24 @@
             <%= f.text_area :body, class: "form-control", placeholder: "説明書く", size: "100x10" %>
           </div>
           <div class="form-group">
-              <label class="control-label">出演アーティスト</label>
-              <%= f.text_field :artist, class: "form-control" %>
+            <label class="control-label">出演アーティスト</label>
+            <%= f.text_field :artist, class: "form-control" %>
           </div>
           <div class="form-group">
-              <label class="control-label">会場</label>
-              <%= f.text_field :live_venue, class: "form-control" %>
+            <label class="control-label">会場</label>
+            <%= f.text_field :live_venue, class: "form-control" %>
           </div>
           <div class="form-group">
-              <label class="control-label">開催日</label>
-              <%= f.date_field :start_date, value: @post.start_date, class: "form-control" %>
+            <label class="control-label">開催日</label>
+            <%= f.date_field :start_date, value: @post.start_date, class: "form-control" %>
           </div>
           <div class="form-group">
-              <label class="control-label">開演時間</label>
-              <%= f.time_field :start_time, value: @post.start_time, class: "form-control" %>
+            <label class="control-label">開演時間</label>
+            <%= f.time_field :start_time, value: @post.start_time, class: "form-control" %>
           </div>
           <div class="form-group">
-              <label class="control-label">閉場時間</label>
-              <%= f.time_field :ending_time, value: @post.ending_time, class: "form-control" %>
+            <label class="control-label">閉場時間</label>
+            <%= f.time_field :ending_time, value: @post.ending_time, class: "form-control" %>
           </div>
           <div class="form-group">
             <label class="control-label">写真</label>
