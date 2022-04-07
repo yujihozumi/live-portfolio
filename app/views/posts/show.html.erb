@@ -50,14 +50,14 @@
           </div>
           <div class="m-2">
             <div id='map'></div>
-                <style>
-                  #map {
-                    height: 300px;
-                    width: 80%;
-                    margin: auto;
-                  }
-                </style>
-                <script>
+              <style>
+                #map {
+                  height: 300px;
+                  width: 80%;
+                  margin: auto;
+                }
+              </style>
+              <script>
                 let map
                   function initMap(){
                     geocoder = new google.maps.Geocoder()
@@ -81,8 +81,7 @@
                       title: contentString
                     });
                   }
-                  </script>
-                  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=<%= ENV['GOOGLE_MAP_API_KEY'] %>&callback=initMap" async defer></script>
+              </script>
           </div>
           <div class="comment-post-id">
             <div class="m-2">
