@@ -13,9 +13,10 @@ class Post < ApplicationRecord
   validates :start_date,     presence: true
   validates :body,           presence: true
 
-  geocoded_by :live_venue
-  after_validation :geocode, if: :live_venue_changed?
   def liked_by(user)
     Like.find_by(user_id: user.id, post_id: id)
   end
+
+  geocoded_by :live_venue
+  after_validation :geocode, if: :live_venue_changed?
 end
