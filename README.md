@@ -36,4 +36,5 @@ MacOs　　
 # トップページ
 ![3830BAD6-219C-41C6-9A23-E8BACC74D249_1_201_a](https://user-images.githubusercontent.com/85857291/158050001-0f937f33-8355-4176-a856-dba314e4231f.jpeg)
 # 投稿詳細ページ
-![336C4B14-AD7A-46FE-A419-44385CD5599D_1_201_a](https://user-images.githubusercontent.com/85857291/158050033-357224d4-b7a8-44cb-8129-2d2f6b9b8e56.jpeg)  
+![screencapture-hidden-dusk-72220-herokuapp-posts-16-2022-04-07-13_08_51](https://user-images.githubusercontent.com/85857291/162118502-b74ccb65-1796-4286-b6b1-7a83762b9e62.png)
+ 
