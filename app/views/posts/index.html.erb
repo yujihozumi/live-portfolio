@@ -41,6 +41,7 @@
             <div>
               <p><strong><%= post.user.name %></strong></p>
               <p><span><%= post.title %></span></p>
+              <p><span><%= post.artist %></span></p>
               <%= link_to time_ago_in_words(post.created_at).upcase + "前", post_path(post), class: "post-time no-text-decoration" %>
               <div id="comment-post-<%= post.id.to_s %>">
                 <%= render 'comment_list', { post: post } %>
