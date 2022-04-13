@@ -1,8 +1,14 @@
+<%= javascript_pack_tag 'post/new' %>
 <div class="d-flex flex-column align-items-center mt-3">
   <div class="col-xl-7 col-lg-8 col-md-10 col-sm-11 post-card">
     <div class="card">
       <div class="card-header">
-        投稿画面
+        <div class="container">
+          <div class="post-card-title">
+            <p class="post-new">投稿ページ</p>
+          </div>
+            <%= render 'partial/sidemenu' %>
+        </div>
       </div>
       <div class="card-body">
         <%= form_with model: @post, class: "upload-images p-0 border-0" do |f| %>
